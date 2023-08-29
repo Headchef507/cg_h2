@@ -4,8 +4,8 @@ var gl;
 var points;
 
 //H2 D1 C
-//var NumPoints = 100;
-var NumPoints = 5000;
+var NumPoints = 100;
+//var NumPoints = 5000;
 
 window.onload = function init()
 {
@@ -31,7 +31,11 @@ window.onload = function init()
 
     var u = add( vertices[0], vertices[1] );
     var v = add( vertices[0], vertices[2] );
-    var p = scale( 0.25, add( u, v ) );
+    //var p = scale( 0.25, add( u, v ) );
+    //var p = scale( 100, 100 );
+    //H2 D1 A) 
+    //var p = scale( 0.25, add( u, v ) );
+    var p = vec2( 100, 100);
 
     // And, add our initial point into our array of points
 
@@ -51,8 +55,6 @@ window.onload = function init()
     //
     //  Configure WebGL
     //
-    // H2 D1 A) 
-    //  gl.viewport( 100, 100, canvas.width, canvas.height );
     gl.viewport( 0, 0, canvas.width, canvas.height );
     gl.clearColor( 1.0, 1.0, 1.0, 1.0 );
 
